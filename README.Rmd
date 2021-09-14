@@ -204,11 +204,8 @@ Plain R priority queue
 
 * Implemented as an environment with storage for a list of objects and a vector of priorities.
 * New objects and their priorities are appended to the list/vector in the environment.
-* When a value is *popped*, the objects are sorted by the priorities, and the
-  first object is returned.
-* The R version is slightly optimized for the situation where there are consecutive 
-  reads, in that it does not re-sort the objects if no new objects have been
-  added to the queue since the last pop operation.
+* When a value is *popped*, the maximum priority is found (using `whichmax()`) and 
+  the matching object is returned
 
 C priority queue
 

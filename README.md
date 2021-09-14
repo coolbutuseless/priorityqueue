@@ -177,15 +177,15 @@ res <- bench::press(
 
 | expression                     |    N |     itr/sec | mem\_alloc |
 |:-------------------------------|-----:|------------:|-----------:|
-| Plain R priority queue         |   10 |  331.894693 |   384.12KB |
-| C priority queue               |   10 | 2841.361287 |   226.52KB |
-| collections::priority\_queue() |   10 | 3157.682577 |   278.94KB |
-| Plain R priority queue         |  100 |   30.450830 |     5.88MB |
-| C priority queue               |  100 |  346.572071 |     1.48MB |
-| collections::priority\_queue() |  100 |  307.965193 |     1.47MB |
-| Plain R priority queue         | 1000 |    1.194012 |   445.05MB |
-| C priority queue               | 1000 |   34.942391 |    14.73MB |
-| collections::priority\_queue() | 1000 |   29.576827 |    14.71MB |
+| Plain R priority queue         |   10 |  823.742603 |   408.02KB |
+| C priority queue               |   10 | 3339.651610 |   226.52KB |
+| collections::priority\_queue() |   10 | 3421.177192 |   278.94KB |
+| Plain R priority queue         |  100 |   60.869080 |     7.94MB |
+| C priority queue               |  100 |  369.796307 |     1.48MB |
+| collections::priority\_queue() |  100 |  326.521527 |     1.47MB |
+| Plain R priority queue         | 1000 |    1.372404 |   645.93MB |
+| C priority queue               | 1000 |   31.084030 |    14.73MB |
+| collections::priority\_queue() | 1000 |   28.158516 |    14.71MB |
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
@@ -197,12 +197,8 @@ Plain R priority queue
     a vector of priorities.
 -   New objects and their priorities are appended to the list/vector in
     the environment.
--   When a value is *popped*, the objects are sorted by the priorities,
-    and the first object is returned.
--   The R version is slightly optimized for the situation where there
-    are consecutive reads, in that it does not re-sort the objects if no
-    new objects have been added to the queue since the last pop
-    operation.
+-   When a value is *popped*, the maximum priority is found (using
+    `whichmax()`) and the matching object is returned
 
 C priority queue
 
