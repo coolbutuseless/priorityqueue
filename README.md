@@ -177,15 +177,15 @@ res <- bench::press(
 
 | expression                     |    N |     itr/sec | mem\_alloc |
 |:-------------------------------|-----:|------------:|-----------:|
-| Plain R priority queue         |   10 |  326.554335 |   384.12KB |
-| C priority queue               |   10 | 2899.744044 |   226.52KB |
-| collections::priority\_queue() |   10 | 2991.170859 |   278.94KB |
-| Plain R priority queue         |  100 |   28.414768 |     5.88MB |
-| C priority queue               |  100 |  336.337200 |     1.48MB |
-| collections::priority\_queue() |  100 |  306.699672 |     1.47MB |
-| Plain R priority queue         | 1000 |    1.145615 |   445.05MB |
-| C priority queue               | 1000 |   35.713291 |    14.73MB |
-| collections::priority\_queue() | 1000 |   29.016613 |    14.71MB |
+| Plain R priority queue         |   10 |  331.894693 |   384.12KB |
+| C priority queue               |   10 | 2841.361287 |   226.52KB |
+| collections::priority\_queue() |   10 | 3157.682577 |   278.94KB |
+| Plain R priority queue         |  100 |   30.450830 |     5.88MB |
+| C priority queue               |  100 |  346.572071 |     1.48MB |
+| collections::priority\_queue() |  100 |  307.965193 |     1.47MB |
+| Plain R priority queue         | 1000 |    1.194012 |   445.05MB |
+| C priority queue               | 1000 |   34.942391 |    14.73MB |
+| collections::priority\_queue() | 1000 |   29.576827 |    14.71MB |
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
