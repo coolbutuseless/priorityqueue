@@ -345,21 +345,3 @@ SEXP cpq_peek_(SEXP cpq_) {
   return VECTOR_ELT(prot_list, pq->elem_idx[0]);
 }
 
-
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-// Dump
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-SEXP cpq_dump_(SEXP cpq_) {
-  cpq_t *pq = unbox_cpq(cpq_);
-
-  Rprintf("Len: %i/%i\n", pq->len, pq->size);
-  for (int i = 0; i < pq->len; i++) {
-    Rprintf("%.1f [%lu]  ", pq->priority[i], pq->elem_idx[i]);
-  }
-  Rprintf("\n");
-
-  return R_NilValue;
-}
-
-
-

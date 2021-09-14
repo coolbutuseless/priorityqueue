@@ -56,10 +56,3 @@ cpq_length <- function(cpq) {
   .Call(cpq_length_, cpq)
 }
 
-
-#' @rdname cpq_create
-#' @export
-cpq_dump <- function(cpq) {
-  .Call(cpq_dump_, cpq)
-}
-

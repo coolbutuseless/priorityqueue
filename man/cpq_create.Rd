@@ -7,7 +7,6 @@
 \alias{cpq_insert}
 \alias{cpq_pop}
 \alias{cpq_peek}
-\alias{cpq_dump}
 \title{My Priority Queue}
 \usage{
 cpq_create()
@@ -23,8 +22,6 @@ cpq_pop(cpq)
 cpq_peek(cpq)
 
 cpq_length(cpq)
-
-cpq_dump(cpq)
 }
 \arguments{
 \item{cpq}{my priority queue object}
