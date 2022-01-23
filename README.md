@@ -175,17 +175,17 @@ res <- bench::press(
 
     #> Warning: Some expressions had a GC in every iteration; so filtering is disabled.
 
-| expression                     |    N |     itr/sec | mem\_alloc |
-|:-------------------------------|-----:|------------:|-----------:|
-| Plain R priority queue         |   10 |  823.742603 |   408.02KB |
-| C priority queue               |   10 | 3339.651610 |   226.52KB |
-| collections::priority\_queue() |   10 | 3421.177192 |   278.94KB |
-| Plain R priority queue         |  100 |   60.869080 |     7.94MB |
-| C priority queue               |  100 |  369.796307 |     1.48MB |
-| collections::priority\_queue() |  100 |  326.521527 |     1.47MB |
-| Plain R priority queue         | 1000 |    1.372404 |   645.93MB |
-| C priority queue               | 1000 |   31.084030 |    14.73MB |
-| collections::priority\_queue() | 1000 |   28.158516 |    14.71MB |
+| expression                    |    N |     itr/sec | mem_alloc |
+|:------------------------------|-----:|------------:|----------:|
+| Plain R priority queue        |   10 |  791.062667 |  408.03KB |
+| C priority queue              |   10 | 3352.014445 |  226.52KB |
+| collections::priority_queue() |   10 | 3387.969982 |  278.94KB |
+| Plain R priority queue        |  100 |   65.028589 |    7.94MB |
+| C priority queue              |  100 |  385.240687 |    1.48MB |
+| collections::priority_queue() |  100 |  341.679598 |    1.47MB |
+| Plain R priority queue        | 1000 |    1.362464 |  645.93MB |
+| C priority queue              | 1000 |   37.370361 |   14.73MB |
+| collections::priority_queue() | 1000 |   29.101393 |   14.71MB |
 
 <img src="man/figures/README-unnamed-chunk-3-1.png" width="100%" />
 
@@ -198,7 +198,7 @@ Plain R priority queue
 -   New objects and their priorities are appended to the list/vector in
     the environment.
 -   When a value is *popped*, the maximum priority is found (using
-    `whichmax()`) and the matching object is returned
+    `which.max()`) and the matching object is returned
 
 C priority queue
 
